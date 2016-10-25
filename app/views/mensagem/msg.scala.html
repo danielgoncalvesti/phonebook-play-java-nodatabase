@@ -1,0 +1,13 @@
+@if(flash.containsKey("sucesso")) {
+<div class="alert alert-success">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    @flash.get("sucesso")
+</div>
+}
+
+@if(flash.containsKey("erro")) {
+<div class="alert alert-danger fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    @flash.get("erro")
+</div>
+}

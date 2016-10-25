@@ -1,0 +1,12 @@
+@media (min-width:979px) {
+ body
+}
+form
+table
+td
+td > form
+{ padding-top:60px }
+{ margin:0 }
+{ margin-top:8px }
+{ position:relative }
+{ position:absolute; right:8px; top:14px }

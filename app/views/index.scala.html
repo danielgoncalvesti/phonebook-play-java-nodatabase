@@ -1,0 +1,31 @@
+@(contatos: List[Contato])
+
+@main {
+    <br />
+    <form action="@routes.ContatoCRUD.list()" method="GET">
+        <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                      <span class="input-group-btn">
+                          <a href="@routes.ContatoCRUD.add()">
+                              <button class="btn btn-primary" type="button">Novo Contato</button>
+                          </a>
+                      </span>
+
+                    <input class="form-control" placeholder="Pesquisar Telefone..." name="filter" type="text" autofocus="">
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary" type="submit">Pesquisar</button>
+
+                    </span>
+
+                </div>
+            </div>
+            </div>
+        </form>
+        <br />
+        @list(contatos)
+
+
+
+
+}
