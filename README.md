@@ -1,2 +1,4 @@
 # Phonebook - Play Framework 2.5
-Agenda telefônica desenvolvida Play Framework 2.5 - Utilizada a classe java ConcurrentHashMap para cadastrar os telefones. Nível Básico
+Details: developed Phonebook Play Framework 2.5 - Used the ConcurrentHashMap java class to register the phone numbers.
+
+Level: for beginners Play Framework.
