@@ -1,1 +1,1 @@
-web: target/start -Dhttp.port=${PORT} ${JAVA_OPTS}
+web: target/universal/stage/bin/play_agenda -Dhttp.port=$PORT -Dplay.version=2.5.9
