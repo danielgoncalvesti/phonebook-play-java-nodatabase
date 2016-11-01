@@ -1,4 +1,4 @@
-# Phonebook - Play Framework 2.5
+# Phonebook - Play Framework 2.5 - Simple CRUD
 Details: developed Phonebook Play Framework 2.5 - Used the ConcurrentHashMap java class to register the phone numbers.
 
 Level: for beginners Play Framework.
