@@ -15,15 +15,11 @@ import java.util.concurrent.atomic.AtomicLong;
  */
 public class Contato{
 
-//value="\\+?[0-9]+",
+
     public Long id;
     @Required
     public String nome;
     @Required
-    @Pattern(
-            value="\\+?[0-9]{4}[0-9]{5}([- .])[0-9]{4}",
-            message = "Opcional usar '+', seguido de digitos e espaços"
-    )
     public String telefone;
 
     public Contato(){

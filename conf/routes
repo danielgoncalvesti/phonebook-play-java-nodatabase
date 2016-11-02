@@ -7,6 +7,9 @@ GET     /                         controllers.HomeController.index
 GET     /contatos                 controllers.ContatoCRUD.list(filter ?= "")
 GET     /contatos/new             controllers.ContatoCRUD.add
 GET     /contatos/:id             controllers.ContatoCRUD.edit(id: Long)
+GET     /autor                    controllers.HomeController.autor
+
+
 POST    /contatos/:id/remove      controllers.ContatoCRUD.doRemove(id: Long)
 POST    /contatos/novo            controllers.ContatoCRUD.doNovo
 POST    /contatos/edit            controllers.ContatoCRUD.doEdit

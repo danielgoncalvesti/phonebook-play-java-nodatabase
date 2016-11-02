@@ -9,6 +9,8 @@ scalaVersion := "2.11.7"
 libraryDependencies ++= Seq(
   javaJdbc,
   cache,
-  javaWs
+  javaWs,
+  "org.webjars.bower" % "compass-mixins" % "0.12.7",
+  "org.webjars.bower" % "bootstrap-sass" % "3.3.6"
 )
 
