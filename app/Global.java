@@ -13,6 +13,15 @@ public class Global extends GlobalSettings {
         ContatoHelper.save(novoContato("Joana Santos", "+551198322-3301"));
         ContatoHelper.save(novoContato("Janaina Pedrosa", "+551198333-8802"));
         ContatoHelper.save(novoContato("Roberto Barros", "+551198333-8803"));
+        ContatoHelper.save(novoContato("Ana Paula Barros", "+551198333-8703"));
+        ContatoHelper.save(novoContato("Reginaldo Oliveira", "+551198333-8882"));
+        ContatoHelper.save(novoContato("Roberto Fredes", "+551198333-8803"));
+        ContatoHelper.save(novoContato("Alfredo Barros", "+551198333-8103"));
+        ContatoHelper.save(novoContato("Juliana Fraga", "+551198333-8006"));
+        ContatoHelper.save(novoContato("Roberto Barros", "+551198333-8503"));
+        ContatoHelper.save(novoContato("Paulo Cesar", "+551198333-8808"));
+        ContatoHelper.save(novoContato("Roberto Jan", "+551198333-8603"));
+        ContatoHelper.save(novoContato("Renato Bay", "+551198333-8706"));
 
     }
 

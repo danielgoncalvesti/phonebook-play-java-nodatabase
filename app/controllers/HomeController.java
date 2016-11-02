@@ -17,12 +17,11 @@ public class HomeController extends Controller {
      * <code>GET</code> request with a path of <code>/</code>.
      */
     public Result index() {
-//        return ok(index.render("Your new application is ready."));
         return redirect(routes.ContatoCRUD.list(""));
     }
 
-    public Result sobre() {
-        return ok(sobre.render("Sobre"));
+    public Result about() {
+        return ok(about.render("About"));
     }
 
 }

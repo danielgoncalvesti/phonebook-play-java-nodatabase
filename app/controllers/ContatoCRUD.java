@@ -33,14 +33,14 @@ public class ContatoCRUD extends Controller {
 
     public Result add() {
         Form<Contato> form = contatoForm.fill(new Contato());
-        return ok(views.html.novo.render(form, "Adicionar Telefone"));
+        return ok(views.html.novo.render(form, "Add Contact"));
     }
 
     public Result edit(long id) {
         Contato contato = models.ContatoHelper.findById(id);
         if (contato != null) {
             Form<Contato> form = contatoForm.fill(contato);
-            return ok(views.html.edit.render(form, "Editar Contato"));
+            return ok(views.html.edit.render(form, "Edit Contact"));
         } else {
             return redirect(routes.ContatoCRUD.list(""));
         }
@@ -50,7 +50,7 @@ public class ContatoCRUD extends Controller {
         Form<Contato> form = contatoForm.bindFromRequest(request());
         if (form.hasErrors()) {
             flash("erro", "Foram identificados problemas no cadastro do telefone. Preencha como o exemplo: +551198525-1525");
-            return badRequest(views.html.edit.render(form, "Editar Contato"));
+            return badRequest(views.html.edit.render(form, "Edit Contact"));
         } else {
             models.ContatoHelper.save(form.get());
 //            flash("sucesso", "Alterado com sucesso!");
@@ -62,10 +62,10 @@ public class ContatoCRUD extends Controller {
         Form<Contato> form = contatoForm.bindFromRequest(request());
         if (form.hasErrors()) {
             flash("erro", "Foram identificados problemas no cadastro do telefone. Preencha como o exemplo: +551198525-1525");
-            return badRequest(views.html.novo.render(form, "Adicionar Contato"));
+            return badRequest(views.html.novo.render(form, "Add Contact"));
         } else {
             models.ContatoHelper.save(form.get());
-            flash("sucesso", "Adicionado com sucesso!");
+            flash("success", "Contact successfully added!");
             return redirect(routes.ContatoCRUD.list(""));
         }
 

@@ -5,24 +5,11 @@
 
 <form action="@routes.ContatoCRUD.doEdit()" method="POST">
     <input type="hidden" name="id" value="@contatoForm("id").value">
-    <div>
-        <label for="name">Nome</label>
-        <div class="input">
-            <input type="text" id="name" name="nome" value="@contatoForm("nome").value" autofocus="">
-        </div>
-    </div>
+        @_form(contatoForm)
     <br />
     <div>
-        <label for="phone">Telefone<small><p>(Exemplo: +551198525-1525)</small></p></label>
-        <div class="input">
-            <input type="text" id="phone" name="telefone"
-                   value="@contatoForm("telefone").value"><br />
-        </div>
-    </div>
-    <br />
-    <div>
-        <button type="submit" class="btn btn-success">Salvar</button>
-        <a class="btn btn-default" href="@routes.ContatoCRUD.list()">Voltar</a>
+        <button type="submit" class="btn btn-success">Save</button>
+        <a class="btn btn-default" href="@routes.ContatoCRUD.list()">Back</a>
     </div>
 </form>
 

@@ -1,0 +1,16 @@
+@(contatoForm: Form[Contato])
+
+<div>
+    <label for="name">Name</label>
+    <div class="input">
+        <input type="text" id="name" name="nome" value="@contatoForm("nome").value" autofocus="">
+    </div>
+</div>
+<br />
+<div>
+    <label for="phone">Phone Number</label>
+    <div class="input">
+        <input type="text" id="phone" name="telefone"
+               value="@contatoForm("telefone").value"><br />
+    </div>
+</div>

@@ -4,15 +4,15 @@
 
 # An example controller showing a sample home page
 GET     /                         controllers.HomeController.index
-GET     /contatos                 controllers.ContatoCRUD.list(filter ?= "")
-GET     /contatos/new             controllers.ContatoCRUD.add
-GET     /contatos/:id             controllers.ContatoCRUD.edit(id: Long)
-GET     /sobre                    controllers.HomeController.sobre
+GET     /contats                 controllers.ContatoCRUD.list(filter ?= "")
+GET     /contact/new             controllers.ContatoCRUD.add
+GET     /contact/:id             controllers.ContatoCRUD.edit(id: Long)
+GET     /about                    controllers.HomeController.about
 
 
-POST    /contatos/:id/remove      controllers.ContatoCRUD.doRemove(id: Long)
-POST    /contatos/novo            controllers.ContatoCRUD.doNovo
-POST    /contatos/edit            controllers.ContatoCRUD.doEdit
+POST    /contact/:id/remove      controllers.ContatoCRUD.doRemove(id: Long)
+POST    /contact/new             controllers.ContatoCRUD.doNovo
+POST    /contact/edit            controllers.ContatoCRUD.doEdit
 
 
 # Map static resources from the /public folder to the /assets URL path

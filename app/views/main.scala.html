@@ -37,12 +37,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Agenda Telefônica</a>
+            <a class="navbar-brand" href="/">Phonebook</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/">Início</a></li>
-                <li><a href="/sobre">Sobre</a></li>
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="@routes.HomeController.about()">About</a></li>
                 <!--<li class="dropdown">-->
                     <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>-->
                     <!--<ul class="dropdown-menu">-->
@@ -70,6 +70,31 @@
     @content
 
 </div>
+<br /><br /><br />
+
+<footer class="navbar-default navbar-inverse navbar-fixed-bottom">
+    <div class="container">
+        <ul class="list-inline">
+
+            <li>
+                <p class="text-muted">This is a Example of Play Framework CRUD</p>
+            </li>
+            <li>
+                <a class="" href="https://github.com/danielgoncalvesti" target="_blank" style="color:black">
+
+                    <i class="fa fa-github fa-2x"></i>
+
+                </a>
+            </li>
+            <li>
+                <a class="" href="https://twitter.com/dnielgoncalves" target="_blank">
+                    <i class="fa fa-twitter fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
