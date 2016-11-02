@@ -21,8 +21,8 @@ public class HomeController extends Controller {
         return redirect(routes.ContatoCRUD.list(""));
     }
 
-    public Result autor() {
-        return ok(autor.render("Sobre"));
+    public Result sobre() {
+        return ok(sobre.render("Sobre"));
     }
 
 }
