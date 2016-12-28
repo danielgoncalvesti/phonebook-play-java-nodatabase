@@ -4,7 +4,7 @@
 
 # An example controller showing a sample home page
 GET     /                         controllers.HomeController.index
-GET     /contats                 controllers.ContatoCRUD.list(filter ?= "")
+GET     /contacts                 controllers.ContatoCRUD.list(filter ?= "")
 GET     /contact/new             controllers.ContatoCRUD.add
 GET     /contact/:id             controllers.ContatoCRUD.edit(id: Long)
 GET     /about                    controllers.HomeController.about
