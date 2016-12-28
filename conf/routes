@@ -11,7 +11,7 @@ GET     /about                    controllers.HomeController.about
 
 
 POST    /contact/:id/remove      controllers.ContatoCRUD.doRemove(id: Long)
-POST    /contact/new             controllers.ContatoCRUD.doNovo
+POST    /contact/new             controllers.ContatoCRUD.doNew
 POST    /contact/edit            controllers.ContatoCRUD.doEdit
 
 

@@ -3,7 +3,7 @@
 
 <h1>@heading</h1>
 
-<form action="@routes.ContatoCRUD.doNovo()" method="POST">
+<form action="@routes.ContatoCRUD.doNew()" method="POST">
     <input type="hidden" name="id" value="@contatoForm("id").value">
     @_form(contatoForm)
     <br />

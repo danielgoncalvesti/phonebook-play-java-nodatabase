@@ -58,7 +58,7 @@ public class ContatoCRUD extends Controller {
         }
 
     }
-    public Result doNovo() {
+    public Result doNew() {
         Form<Contato> form = contatoForm.bindFromRequest(request());
         if (form.hasErrors()) {
             flash("erro", "Foram identificados problemas no cadastro do telefone. Preencha como o exemplo: +551198525-1525");

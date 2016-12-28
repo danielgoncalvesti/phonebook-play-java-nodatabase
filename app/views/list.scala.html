@@ -1,21 +1,27 @@
 @(contatos: List[Contato])
 
 <table class="table table-hover">
-    @for(contato <- contatos) {
-        <tr>
-            <td>
-                <strong>@contato.nome</strong><br>
-                <a href="tel:@contato.telefone">@contato.telefone</a>
 
-            </td>
-            <td class="text-right">
-                <form action="@routes.ContatoCRUD.doRemove(contato.id)"
-                      method="POST">
-                    <a href="@routes.ContatoCRUD.edit(contato.id)" class="btn btn-xs btn-info">Edit</a>
-                    <input type="submit" value="Delete" class="btn btn-xs btn-danger">
-                </form>
-            </td>
-        </tr>
+    @if(!contatos.isEmpty){
+        @for(contato <- contatos) {
+            <tr>
+                <td>
+                    <strong>@contato.nome</strong><br>
+                    <a href="tel:@contato.telefone">@contato.telefone</a>
+
+                </td>
+                <td class="text-right">
+                    <form action="@routes.ContatoCRUD.doRemove(contato.id)"
+                          method="POST">
+                        <a href="@routes.ContatoCRUD.edit(contato.id)" class="btn btn-xs btn-info">Edit</a>
+                        <input type="submit" value="Delete" class="btn btn-xs btn-danger">
+                    </form>
+                </td>
+            </tr>
+        }
+    } else {
+       <strong> <br /><p>Nenhum contato encontrado. Tente uma nova pesquisa.</p> </strong>
+
     }
 
 </table>
