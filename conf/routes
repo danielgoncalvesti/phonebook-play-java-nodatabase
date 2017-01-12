@@ -5,13 +5,13 @@
 # An example controller showing a sample home page
 GET     /                         controllers.HomeController.index
 GET     /contacts                 controllers.ContatoCRUD.list(filter ?= "")
-GET     /contact/new             controllers.ContatoCRUD.add
+GET     /contact/add             controllers.ContatoCRUD.add
 GET     /contact/:id             controllers.ContatoCRUD.edit(id: Long)
 GET     /about                    controllers.HomeController.about
 
 
 POST    /contact/:id/remove      controllers.ContatoCRUD.doRemove(id: Long)
-POST    /contact/new             controllers.ContatoCRUD.doNew
+POST    /contact/add             controllers.ContatoCRUD.doAdd
 POST    /contact/edit            controllers.ContatoCRUD.doEdit
 
 

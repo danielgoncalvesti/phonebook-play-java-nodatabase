@@ -19,6 +19,7 @@ public class ContatoHelper {
     }
 
     public static Contato findById(long id) {
+
         return contatos.get(id);
     }
 

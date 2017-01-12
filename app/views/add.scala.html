@@ -1,0 +1,17 @@
+@(contatoForm: Form[Contato], heading: String)
+@main{
+<div class="row">
+    <div class="col-md-4 col-md-offset-4 col-xs-offset-2 col-xs-8">
+    <h1>@heading</h1>
+    <form id="maskForm" action="@routes.ContatoCRUD.doAdd()" method="POST">
+        <input type="hidden" name="id" value="@contatoForm("id").value">
+        @_form(contatoForm)
+        <br />
+        <div>
+            <button type="submit" class="btn btn-success">Save</button>
+            <a class="btn btn-default" href="@routes.ContatoCRUD.list()">Back</a>
+        </div>
+    </form>
+    </div>
+</div>
+}
