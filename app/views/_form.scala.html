@@ -2,7 +2,7 @@
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://digitalbush.com/wp-content/uploads/2014/10/jquery.maskedinput.js"></script>
+    <script type="text/javascript" src="@routes.Assets.versioned("js/jquery.maskedinput.min.js")"></script>
     <script type="text/javascript" src="@routes.Assets.versioned("js/Mask.js")"></script>
 
 
@@ -18,7 +18,7 @@
 <div>
     <label for="phone" id="phoneName">Phone Number</label>
     <div class="input">
-        <input type="text" id="phone" name="telefone" placeholder="(11) 99999-9999"
-               value="@contatoForm("telefone").value" ><br />
+        <input type="text" id="txtPhone" name="telefone" placeholder="(11) 99999-9999"
+               value="@contatoForm("telefone").value" >  <span id="spnPhoneStatus"></span><br />
     </div>
 </div>
