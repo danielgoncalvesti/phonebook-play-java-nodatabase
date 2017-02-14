@@ -7,13 +7,13 @@ $(document).ready(function() {
         if (validatePhone('txtPhone')) {
             $('#spnPhoneStatus').html('Valid');
             $('#spnPhoneStatus').css('color', 'green');
-            $("#save").removeAttr("disabled");
+//            $("#save").removeAttr("disabled");
 
         }
         else {
             $('#spnPhoneStatus').html('Invalid');
             $('#spnPhoneStatus').css('color', 'red');
-            $('#save').attr("disabled", "disabled");
+//            $('#save').attr("disabled", "disabled");
         }
     });
 });

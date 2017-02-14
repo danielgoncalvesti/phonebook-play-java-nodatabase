@@ -16,6 +16,8 @@ public class ContatoCRUD extends Controller {
 
     private final Form<Contato> contatoForm;
 
+    private final String PROBLEM_IDENTIFIED_PHONE_NUMBER = "Problems have been identified in the Phone Number field. Fill in as follows: (XX) XXXXX-XXXX";
+
     @Inject
     public ContatoCRUD(FormFactory formFactory) {
         this.contatoForm = formFactory.form(Contato.class);
@@ -49,8 +51,7 @@ public class ContatoCRUD extends Controller {
     public Result doEdit() {
         Form<Contato> form = contatoForm.bindFromRequest(request());
         if (form.hasErrors()) {
-            flash("erro", "Foram identificados problemas no cadastro do telefone. " +
-                    "Preencha como o exemplo: (11) 98525-1525");
+            flash("erro",  PROBLEM_IDENTIFIED_PHONE_NUMBER);
             return badRequest(views.html.edit.render(form, "Edit Contact"));
         } else {
             models.ContatoHelper.save(form.get());
@@ -62,8 +63,7 @@ public class ContatoCRUD extends Controller {
     public Result doAdd() {
         Form<Contato> form = contatoForm.bindFromRequest(request());
         if (form.hasErrors()) {
-            flash("erro", "Foram identificados problemas no cadastro do " +
-                    "telefone. Preencha como o exemplo: (11) 98525-1525");
+            flash("erro", PROBLEM_IDENTIFIED_PHONE_NUMBER);
             return badRequest(views.html.add.render(form, "Add Contact"));
         } else {
             models.ContatoHelper.save(form.get());
