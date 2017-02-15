@@ -33,7 +33,15 @@ public class ContatoHelper {
         return result;
     }
 
-
+    public static List<Contato> findAll(){
+//        List<Contato> result = new ArrayList<Contato>();
+//        for (Contato contato: contatos.values()){
+//                result.add(contato);
+//
+//        }
+//        return result;
+        return new ArrayList<Contato>(contatos.values());
+    }
     public static void save(Contato contato) {
         if (contato.id == null) {
             contato.id = uuid.incrementAndGet();

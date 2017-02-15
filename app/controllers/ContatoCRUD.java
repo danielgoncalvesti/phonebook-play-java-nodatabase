@@ -8,6 +8,8 @@ import play.data.FormFactory;
 
 import javax.inject.Inject;
 import java.util.List;
+import play.libs.Json;
+import com.fasterxml.jackson.databind.JsonNode;
 
 /**
  * Created by mrgoncalvesdaniel on 20/10/16.
@@ -70,7 +72,11 @@ public class ContatoCRUD extends Controller {
             flash("sucesso", "Contact successfully added!");
             return redirect(routes.ContatoCRUD.list(""));
         }
+    }
 
+    public Result apiAll(String filter){
+        List<Contato> contatos = models.ContatoHelper.findAll();
+        return ok(Json.toJson(contatos));
     }
 
 }

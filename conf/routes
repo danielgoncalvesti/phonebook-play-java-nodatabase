@@ -9,6 +9,8 @@ GET     /contact/add             controllers.ContatoCRUD.add
 GET     /contact/:id             controllers.ContatoCRUD.edit(id: Long)
 GET     /about                    controllers.HomeController.about
 
+GET     /api/all                controllers.ContatoCRUD.apiAll(filter ?= "")
+
 
 POST    /contact/:id/remove      controllers.ContatoCRUD.doRemove(id: Long)
 POST    /contact/add             controllers.ContatoCRUD.doAdd
